@@ -30,12 +30,12 @@ export default function Weather() {
         <div className="col-1 units">
           <ul className="temp-unit">
             <li>
-              <a href="#" class="active" id="temp-cel">
+              <a href="/" class="active" id="temp-cel">
                 C
               </a>
             </li>
             <li>
-              <a href="#" id="temp-fahr">
+              <a href="/" id="temp-fahr">
                 F
               </a>
             </li>
@@ -46,7 +46,11 @@ export default function Weather() {
           <ul class="weather-description">
             <li className="description">{weatherData.description}</li>
             <li>
-              <img src={weatherData.image} className="icon" />
+              <img
+                src={weatherData.image}
+                className="icon"
+                alt="weather icon"
+              />
             </li>
           </ul>
           <div className="row details">

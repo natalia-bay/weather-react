@@ -14,8 +14,8 @@ export default function Search() {
             autoComplete="off"
             autofocus=""
           />
-          <button class="btn btn-outline-secondary" type="submit">
-            <i class="fas fa-search" aria-hidden="true"></i>
+          <button className="btn btn-outline-secondary" type="submit">
+            <i className="fas fa-search" aria-hidden="true"></i>
           </button>
           <button className="btn btn-outline-secondary" type="button">
             <i className="fas fa-map-marker-alt" aria-hidden="true"></i>

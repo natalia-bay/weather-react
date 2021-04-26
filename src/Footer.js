@@ -17,6 +17,7 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/natalia-bayduraeva-metaxa/"
             target="_blank"
+            rel="noreferrer"
           >
             natalia
           </a>
