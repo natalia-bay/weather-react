@@ -1,0 +1,12 @@
+.Footer footer {
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: white;
+}
+
+.Footer footer a {
+  text-decoration: none;
+  color: rgb(255, 182, 113);
+}
