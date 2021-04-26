@@ -5,26 +5,3 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.city-box {
-  max-width: 800px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 1px solid rgb(52, 82, 122, 0.3);
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.6);
-  border-color: rgb(52, 82, 122, 0.3);
-}
-
-.current-temp {
-  height: 150px;
-  width: 150px;
-  text-align: right;
-  padding-right: 0;
-}
-
-.weather-block {
-  padding-left: 22px;
-}
