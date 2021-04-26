@@ -91,7 +91,7 @@ h5 {
   color: #48484a;
 }
 
-.units #temp-cel {
+.units .temp-cel {
   border: 1px solid rgb(92, 99, 107, 0.3);
   border-top: transparent;
   border-left: transparent;
@@ -99,7 +99,7 @@ h5 {
   text-decoration: none;
 }
 
-.units #temp-fahr {
+.units .temp-fahr {
   text-decoration: none;
 }
 

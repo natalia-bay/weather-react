@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
@@ -13,7 +12,7 @@ export default function Weather() {
   };
   return (
     <div className="Weather">
-      <h1 id="current-city">Cologne</h1>
+      <h1>Cologne</h1>
       <div>
         <h5>
           Local time: <span id="local-time">18:46</span>
@@ -22,20 +21,18 @@ export default function Weather() {
 
       <div className="row align-items-center current-weather">
         <div className="col-2 current-temp">
-          <span className="temp-value" id="degrees-now">
-            12
-          </span>
+          <span className="temp-value degrees-now">12</span>
           <sup className="degree-element">°</sup>
         </div>
         <div className="col-1 units">
           <ul className="temp-unit">
             <li>
-              <a href="/" class="active" id="temp-cel">
+              <a href="/" class="active temp-cel">
                 C
               </a>
             </li>
             <li>
-              <a href="/" id="temp-fahr">
+              <a href="/" className="temp-fahr">
                 F
               </a>
             </li>
