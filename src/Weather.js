@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -16,12 +17,13 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       feelsLike: response.data.main.feels_like,
+      date: new Date(response.data.dt * 1000),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
-  function search(event) {
-    let apiKey = "7345ee018fd528da4cd97bec34042c86";
+  function search() {
+    const apiKey = "7345ee018fd528da4cd97bec34042c86";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayWeather);
@@ -62,7 +64,7 @@ export default function Weather(props) {
           <h1>{weather.city}</h1>
           <div>
             <h5>
-              Local time: <span id="local-time">18:46</span>
+              <FormattedDate date={weather.date} />
             </h5>
           </div>
 
