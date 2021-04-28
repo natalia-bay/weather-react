@@ -9,7 +9,6 @@ export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
 
   function displayWeather(response) {
-    setLoaded(true);
     setWeather({
       city: response.data.name,
       temperature: response.data.main.temp,
@@ -20,6 +19,7 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
+    setLoaded(true);
   }
 
   function search() {
@@ -131,7 +131,7 @@ export default function Weather(props) {
                         <i class="fas fa-wind"></i>
                       </span>
                       <span className="adjustWind">Wind </span>
-                      <span>{weather.wind}</span> km/h
+                      <span>{Math.round(weather.wind)}</span> km/h
                     </li>
                   </ul>
                 </div>
