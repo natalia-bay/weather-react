@@ -11,19 +11,6 @@ h1 {
   text-transform: capitalize;
 }
 
-footer {
-  text-align: center;
-  font-size: 13px;
-  font-weight: bold;
-  margin-top: 10px;
-  color: white;
-}
-
-footer a {
-  text-decoration: none;
-  color: rgb(255, 182, 113);
-}
-
 .city-box {
   max-width: 800px;
   padding-top: 20px;
@@ -207,9 +194,7 @@ h5 {
   margin-top: 15px;
 }
 
-.icon {
-  width: 75px;
-  height: 75px;
+.Weather canvas {
   position: relative;
   right: 6px;
   bottom: 11px;
