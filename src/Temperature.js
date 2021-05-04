@@ -20,7 +20,7 @@ export default function Temperature(props) {
           <span className="temp-value degrees-now">
             {Math.round(props.celsius)}
           </span>
-          <sup className="degree-element">°C</sup>
+          <sup className="degree-element">°</sup>
         </div>
         <div className="col-1 units">
           <ul className="temp-unit">
