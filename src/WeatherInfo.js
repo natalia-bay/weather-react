@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import Temperature from "./Temperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -14,29 +15,9 @@ export default function WeatherInfo(props) {
         </div>
 
         <div className="row align-items-center current-weather">
-          <div className="col-2 current-temp">
-            <span className="temp-value degrees-now">
-              {Math.round(props.data.temperature)}
-            </span>
-            <sup className="degree-element">°</sup>
-          </div>
-          <div className="col-1 units">
-            <ul className="temp-unit">
-              <li>
-                <a href="/" class="active temp-cel">
-                  C
-                </a>
-              </li>
-              <li>
-                <a href="/" className="temp-fahr">
-                  F
-                </a>
-              </li>
-            </ul>
-          </div>
-
+          <Temperature celsius={props.data.temperature} />
           <div className="col-12 col-md-8 weather-block">
-            <ul class="weather-description">
+            <ul className="weather-description">
               <li className="description">{props.data.description}</li>
               <li>
                 <WeatherIcon code={props.data.icon} className="icon" />
@@ -71,7 +52,7 @@ export default function WeatherInfo(props) {
                   </li>
                   <li>
                     <span className="details-icon">
-                      <i class="fas fa-wind"></i>
+                      <i className="fas fa-wind"></i>
                     </span>
                     <span className="adjustWind">Wind </span>
                     <span>{Math.round(props.data.wind)}</span> km/h

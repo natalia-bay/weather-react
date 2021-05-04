@@ -108,7 +108,6 @@ h5 {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 60px;
 }
 
 .weather-description li {
@@ -196,8 +195,8 @@ h5 {
 
 .Weather canvas {
   position: relative;
-  right: 6px;
-  bottom: 11px;
+  right: -8px;
+  bottom: -5px;
 }
 
 .error {
