@@ -22,13 +22,14 @@ h1 {
   padding-right: 20px;
   border: 1px solid rgb(52, 82, 122, 0.3);
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   border-color: rgb(52, 82, 122, 0.3);
 }
 
 .loading {
   font-size: 40px;
   text-align: center;
+  margin-top: 100px;
 }
 
 .search-field {
