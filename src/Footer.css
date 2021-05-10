@@ -3,10 +3,14 @@
   font-size: 13px;
   font-weight: bold;
   margin-top: 10px;
-  color: white;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .Footer footer a {
   text-decoration: none;
-  color: rgb(255, 182, 113);
+  color: rgba(11, 7, 243, 0.6);
+}
+
+.Footer footer a:hover {
+  color: rgba(255, 255, 255, 0.6);
 }

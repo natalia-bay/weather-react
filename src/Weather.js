@@ -18,11 +18,12 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       feelsLike: response.data.main.feels_like,
       date: new Date(response.data.dt * 1000),
+      time: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
       minTemp: response.data.main.temp_min,
       maxTemp: response.data.main.temp_max,
-      sunrise: response.data.sys.sunrise,
-      sunset: response.data.sys.sunset,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
     });
     setLoaded(true);
   }
@@ -82,7 +83,7 @@ export default function Weather(props) {
             </button>
           </form>
         </div>
-        <div class="container city-box">
+        <div className="container city-box">
           <WeatherInfo data={weather} />
           <WeatherForecast />
         </div>
@@ -90,6 +91,10 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="Weather">
+        <div className="container city-box loading">Loading...</div>
+      </div>
+    );
   }
 }

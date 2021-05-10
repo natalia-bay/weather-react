@@ -23,7 +23,11 @@ export default function Temperature(props) {
               <span class="active temp-cel">C</span>
             </li>
             <li>
-              <a href="/" className="temp-fahr" onClick={convertToFahrenheit}>
+              <a
+                href="/"
+                className="temp-fahr deactivated"
+                onClick={convertToFahrenheit}
+              >
                 F
               </a>
             </li>
@@ -35,16 +39,17 @@ export default function Temperature(props) {
     let fahrenheit = (props.celsius * 9) / 5 + 32;
     return (
       <>
-        <div className="col-2 current-temp">
-          <span className="temp-value degrees-now">
-            {Math.round(fahrenheit)}
-          </span>
-          <sup className="degree-element">°</sup>
-        </div>
-        <div className="col-1 units">
+        <span className="temp-value degrees-now">{Math.round(fahrenheit)}</span>
+        <sup className="degree-element">°</sup>
+
+        <span className="units">
           <ul className="temp-unit">
             <li>
-              <a href="/" className=" temp-cel" onClick={convertToCelsius}>
+              <a
+                href="/"
+                className="temp-cel deactivated"
+                onClick={convertToCelsius}
+              >
                 C
               </a>
             </li>
@@ -52,7 +57,7 @@ export default function Temperature(props) {
               <span className="temp-fahr active">F</span>
             </li>
           </ul>
-        </div>
+        </span>
       </>
     );
   }
