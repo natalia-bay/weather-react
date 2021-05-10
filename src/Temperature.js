@@ -12,13 +12,12 @@ export default function Temperature(props) {
   if (unit === "celsius") {
     return (
       <>
-        <div className="col-2 current-temp">
-          <span className="temp-value degrees-now">
-            {Math.round(props.celsius)}
-          </span>
-          <sup className="degree-element">°</sup>
-        </div>
-        <div className="col-1 units">
+        <span className="temp-value degrees-now">
+          {Math.round(props.celsius)}
+        </span>
+        <sup className="degree-element">°</sup>
+
+        <span className="units">
           <ul className="temp-unit">
             <li>
               <span class="active temp-cel">C</span>
@@ -29,7 +28,7 @@ export default function Temperature(props) {
               </a>
             </li>
           </ul>
-        </div>
+        </span>
       </>
     );
   } else {

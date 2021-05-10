@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -18,6 +19,10 @@ export default function Weather(props) {
       feelsLike: response.data.main.feels_like,
       date: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
+      minTemp: response.data.main.temp_min,
+      maxTemp: response.data.main.temp_max,
+      sunrise: response.data.sys.sunrise,
+      sunset: response.data.sys.sunset,
     });
     setLoaded(true);
   }
@@ -77,8 +82,10 @@ export default function Weather(props) {
             </button>
           </form>
         </div>
-
-        <WeatherInfo data={weather} />
+        <div class="container city-box">
+          <WeatherInfo data={weather} />
+          <WeatherForecast />
+        </div>
       </div>
     );
   } else {
