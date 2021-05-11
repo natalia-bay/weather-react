@@ -25,17 +25,37 @@ export default function WeatherForecastDay(props) {
   function day() {
     let date = new Date(props.data.dt * 1000);
     let day = date.getDay();
-
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     return days[day];
+  }
+
+  function currentDate() {
+    let date = new Date(props.data.dt * 1000);
+    let day = date.getDate();
+    let month = date.getMonth();
+    let months = [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+    ];
+    return `${day}/${months[month]}`;
   }
 
   return (
     <>
       <div className="next-5-days__date">
         {day()}
-        <div className="next-5-days__label">30/7</div>
+        <div className="next-5-days__label">{currentDate()}</div>
       </div>
 
       <div className="next-5-days__low">
