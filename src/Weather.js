@@ -11,6 +11,7 @@ export default function Weather(props) {
 
   function displayWeather(response) {
     setWeather({
+      coordinates: response.data.coord,
       city: response.data.name,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -85,7 +86,7 @@ export default function Weather(props) {
         </div>
         <div className="container city-box">
           <WeatherInfo data={weather} />
-          <WeatherForecast />
+          <WeatherForecast coordinates={weather.coordinates} />
         </div>
       </div>
     );
