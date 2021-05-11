@@ -20,7 +20,7 @@ export default function Temperature(props) {
         <span className="units">
           <ul className="temp-unit">
             <li>
-              <span class="active temp-cel">C</span>
+              <span className="active temp-cel">C</span>
             </li>
             <li>
               <a
