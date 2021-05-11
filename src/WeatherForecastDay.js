@@ -19,7 +19,7 @@ export default function WeatherForecastDay(props) {
 
   function wind() {
     let wind = Math.round(props.data.wind_speed);
-    return `${wind}km/h`;
+    return `${wind}m/s`;
   }
 
   function day() {

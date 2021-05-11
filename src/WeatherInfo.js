@@ -34,7 +34,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col-sm-2 current-stats">
           <div className="current-stats_value">
-            {Math.round(props.data.wind)}km/h
+            {Math.round(props.data.wind)}m/s
           </div>
           <div className="current-stats_label">Wind</div>
           <div className="current-stats_value">{props.data.humidity}%</div>
