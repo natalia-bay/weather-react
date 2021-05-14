@@ -1,6 +1,8 @@
 # React Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and can be viewed [here] (https://jovial-austin-d1c33d.netlify.app/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and can be viewed [here](https://jovial-austin-d1c33d.netlify.app/).
+
+<img width="943" alt="Screen Shot 2021-05-14 at 08 36 29" src="https://user-images.githubusercontent.com/78911193/118203844-89ca6d80-b48f-11eb-9dab-104eb6f72397.png">
 
 ## Available Scripts
 
